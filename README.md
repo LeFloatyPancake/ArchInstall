@@ -14,5 +14,4 @@ Then run the scripts with
 
 ```
 ./uefi-install.sh
-./post-install.sh
 ```
