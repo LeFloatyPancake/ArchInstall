@@ -47,7 +47,7 @@ xclip android-tools cpupower p7zip mtools dosfstools
 
 # Installation for AMD GPU
 #pacman -S --noconfirm xf86-video-amdgpu vulkan-radeon \
-libva-mesa-driver mesa-vdpau
+#libva-mesa-driver mesa-vdpau
 
 # Installation for NVIDIA GPU
 #pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
