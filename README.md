@@ -7,11 +7,11 @@ This requires the `git` package.
 ```
 git clone https://github.com/LeFloatyPancake/Archinstall
 cd ScriptsConf
-chmod +x uefi-install.sh
+chmod +x ext-uefi-install.sh
 ```
 
 Then run the scripts with
 
 ```
-./uefi-install.sh
+./ext-uefi-install.sh
 ```
