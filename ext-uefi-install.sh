@@ -45,12 +45,15 @@ foomatic-db-gutenprint-ppds htop os-prober git wget zsh \
 zsh-autosuggestions zsh-syntax-highlighting wl-clipboard \
 xclip android-tools cpupower p7zip mtools dosfstools
 
-# Installation for AMD GPU
-#pacman -S --noconfirm xf86-video-amdgpu vulkan-radeon \
-#libva-mesa-driver mesa-vdpau
-
-# Installation for NVIDIA GPU
-#pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
+# Graphics Drivers find and install
+if lspci | grep -E "NVIDIA|GeForce"; then
+    pacman -S --noconfirm nvidia nvidia-utils nvidia-settings
+elif lspci | grep -E "Radeon"; then
+    pacman -S --noconfirm xf86-video-amdgpu vulkan-radeon \
+    libva-mesa-driver mesa-vdpau
+elif lspci | grep -E "Integrated Graphics Controller"; then
+    pacman -S --noconfirm vulkan-intel libva-intel-driver
+fi
 
 # Grub installation
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
