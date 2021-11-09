@@ -6,7 +6,7 @@ This requires the `git` package.
 
 ```
 git clone https://github.com/LeFloatyPancake/Archinstall
-cd ScriptsConf
+cd Archinstall
 chmod +x ext-uefi-install.sh
 ```
 
